@@ -1,0 +1,9 @@
+%h1 Acts
+
+%p
+  - @acts.each do |act|
+    = act
+    %a{:href=>"/acts/:id/edit"} Edit
+    %a{:href=>"/acts/:id/destroy"} Destroy
+
+%a{:href=>"/acts/new"} New
