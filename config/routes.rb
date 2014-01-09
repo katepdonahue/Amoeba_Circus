@@ -1,9 +1,21 @@
 AmoebaCircus::Application.routes.draw do
+  resources :amoebas
+
+  get '/acts' => 'acts#index'
+  post '/acts' => 'acts#create'
+  get '/acts/new' => 'acts#new'
+  get '/acts/:id/edit' => 'acts#edit'
+  get '/acts/:id' => 'acts#show'
+  put '/acts/:id' => 'acts#update'
+  delete '/acts/:id' => 'acts#destroy'
+
+  resources :talents
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+    # match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
