@@ -27,5 +27,5 @@ class ActsController < ApplicationController
   def destroy
 
   end
-  
+
 end
