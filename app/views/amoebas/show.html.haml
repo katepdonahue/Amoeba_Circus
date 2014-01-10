@@ -1,8 +1,11 @@
 %h1
   = @amoeba.name
-
-= @amoeba.generation
-= @amoeba.talent.name
+%p
+  Generation:
+  = @amoeba.generation
+%p
+  Talent:
+  = @amoeba.talent.name
 %br
 = link_to "Edit", edit_amoeba_path
 = link_to "Destroy", "/amoebas/#{@amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?' }
