@@ -4,10 +4,9 @@
   - @amoebas.each do |amoeba|
     = amoeba.name
     = amoeba.generation
-    = amoeba.talent_id # make this talent name
-    = amoeba.act_id    # make this act name
-    %a{:href=>"/amoebas/:id/edit"} Edit
-    %a{:href=>"/amoebas/:id/destroy"} Destroy
+    = amoeba.talent_id # eventually make this the actual talent
+    = link_to "Edit", edit_amoeba_path
+    = link_to "Destroy", "/amoebas/#{amoeba.id}/destroy"
     %br
 
-%a{:href=>"/amoebas/new"} New
+= link_to "New", amoeba_path

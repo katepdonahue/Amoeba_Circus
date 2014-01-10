@@ -3,8 +3,8 @@
 %p
   - @talents.each do |talent|
     = talent.name
-    = link_to "Edit", edit_act_path
-    %a{:href=>"/talents/:id/destroy"} Destroy
+    = link_to "Edit", edit_talent_path
+    = link_to "Destroy", "/talents/#{talent.id}/destroy"
     %br
 
-%a{:href=>"/talents/new"} New
+= link_to "New", talent_path
