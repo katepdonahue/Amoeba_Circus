@@ -1,5 +1,5 @@
 class Amoeba < ActiveRecord::Base
   attr_accessible :name, :generation, :talent_id, :act_id
   belongs_to :talent
-  has_many :acts
+  has_many :acts, :though => :act_amoebas
 end
