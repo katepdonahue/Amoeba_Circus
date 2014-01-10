@@ -3,7 +3,7 @@
 %p
   - @talents.each do |talent|
     = talent.name
-    = link_to "Edit", edit_talent_path
+    = link_to "Edit", "/talents/#{talent.id}/edit"
     = link_to "Destroy", "/talents/#{talent.id}/destroy"
     %br
 

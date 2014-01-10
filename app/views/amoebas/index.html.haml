@@ -5,7 +5,7 @@
     = amoeba.name
     = amoeba.generation
     = amoeba.talent_id # eventually make this the actual talent
-    = link_to "Edit", edit_amoeba_path
+    = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
     = link_to "Destroy", "/amoebas/#{amoeba.id}/destroy"
     %br
 
