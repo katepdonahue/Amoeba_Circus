@@ -5,7 +5,7 @@ AmoebaCircus::Application.routes.draw do
   post '/acts' => 'acts#create'
   get '/acts/new' => 'acts#new'
   get '/acts/:id/edit' => 'acts#edit'
-  get '/acts/:id' => 'acts#show'
+  get '/acts/:id' => 'acts#show', as: "act"
   put '/acts/:id' => 'acts#update'
   delete '/acts/:id' => 'acts#destroy'
 

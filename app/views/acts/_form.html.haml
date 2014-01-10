@@ -5,13 +5,9 @@
     %br
     = f.text_field :name
     %br
-    = f.label :date
+    = f.date_select :date, :order=>[:month, :day, :year]
     %br
-    = f.text_field :date
-    %br
-    = f.label :time
-    %br
-    = f.text_field :time
+    = f.time_select :time, {:ampm=>true}
     %br
   .actions
     = f.submit
