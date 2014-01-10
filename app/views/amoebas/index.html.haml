@@ -6,7 +6,7 @@
     = amoeba.generation
     = amoeba.talent_id # eventually make this the actual talent
     = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
-    = link_to "Destroy", "/amoebas/#{amoeba.id}/destroy"
+    = link_to "Destroy", "/amoebas/#{amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?'}
     %br
 
 = link_to "New", new_amoeba_path
