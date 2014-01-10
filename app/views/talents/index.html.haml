@@ -1,0 +1,10 @@
+%h1 Talents
+
+%p
+  - @talents.each do |talent|
+    = talent.name
+    %a{:href=>"/talents/:id/edit"} Edit
+    %a{:href=>"/talents/:id/destroy"} Destroy
+    %br
+
+%a{:href=>"/talents/new"} New

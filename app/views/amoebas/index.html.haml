@@ -1,0 +1,13 @@
+%h1 Amoebas
+
+%p
+  - @amoebas.each do |amoeba|
+    = amoeba.name
+    = amoeba.generation
+    = amoeba.talent_id # make this talent name
+    = amoeba.act_id    # make this act name
+    %a{:href=>"/amoebas/:id/edit"} Edit
+    %a{:href=>"/amoebas/:id/destroy"} Destroy
+    %br
+
+%a{:href=>"/amoebas/new"} New

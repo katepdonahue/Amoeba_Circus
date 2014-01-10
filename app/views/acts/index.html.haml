@@ -2,8 +2,11 @@
 
 %p
   - @acts.each do |act|
-    = act
-    %a{:href=>"/acts/:id/edit"} Edit
-    %a{:href=>"/acts/:id/destroy"} Destroy
+    = act.name
+    = act.date
+    = act.time
+    %a{:href=>"/acts/#{act.id}/edit"} Edit
+    %a{:href=>"/acts/#{act.id}/destroy"} Destroy
+    %br
 
 %a{:href=>"/acts/new"} New
