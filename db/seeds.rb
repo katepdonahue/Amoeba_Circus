@@ -9,12 +9,12 @@
 Act.create([{:name=>"Fireball", :date=>"12/30/2014", :time=>"6:00pm"},
             {:name=>"Baby's Slumber", :date=>"12/30/2014", :time=>"6:30pm"},
             {:name=>"Loopy Lala", :date=>"12/30/2014", :time=>"7:00pm"}])
-Amoeba.create([{:name=>"Bob", :generation=>"1", :talent_id=>"1", :act_id=>"1"},
-               {:name=>"Cora", :generation=>"1", :talent_id=>"2", :act_id=>"2"},
-               {:name=>"Lofi", :generation=>"1", :talent_id=>"3", :act_id=>"2"},
-               {:name=>"Sandy", :generation=>"1", :talent_id=>"4", :act_id=>"3"}, 
-               {:name=>"Meep", :generation=>"1", :talent_id=>"5", :act_id=>"3"}, 
-               {:name=>"Kate", :generation=>"1", :talent_id=>"5", :act_id=>"3"}])
+Amoeba.create([{:name=>"Bob", :generation=>"1", :talent_id=>"1"},
+               {:name=>"Cora", :generation=>"1", :talent_id=>"2"},
+               {:name=>"Lofi", :generation=>"1", :talent_id=>"3"},
+               {:name=>"Sandy", :generation=>"1", :talent_id=>"4"}, 
+               {:name=>"Meep", :generation=>"1", :talent_id=>"5"}, 
+               {:name=>"Kate", :generation=>"1", :talent_id=>"5"}])
 Talent.create([{:name=>"acrobat"}, 
                {:name=>"contortionist"}, 
                {:name=>"clown"}, 

@@ -4,6 +4,6 @@ class AmoebaDropColumn < ActiveRecord::Migration
   end
 
   def down
-    create_column :amoebas, :act_id, :integer
+    add_column :amoebas, :act_id, :integer
   end
 end
