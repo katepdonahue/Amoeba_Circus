@@ -1,17 +1,13 @@
-= form_for(@act) do |f|
+= form_for(@amoeba) do |f|
   
   .field
     = f.label :name
     %br
     = f.text_field :name
     %br
-    = f.label :date
+    = f.label :talent
     %br
-    = f.text_field :date
-    %br
-    = f.label :time
-    %br
-    = f.text_field :time
+    = f.text_field :talent
     %br
   .actions
     = f.submit
