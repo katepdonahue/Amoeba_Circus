@@ -9,8 +9,6 @@ AmoebaCircus::Application.routes.draw do
   put '/acts/:id' => 'acts#update'
   delete '/acts/:id' => 'acts#destroy'
 
-  resources :talents
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
