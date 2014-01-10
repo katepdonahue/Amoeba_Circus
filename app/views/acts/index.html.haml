@@ -1,12 +1,19 @@
 %h1 Acts
 
-%p
+%table
+  %tr
+    %th Name
+    %th Date
+    %th Time
+    %th Actions
   - @acts.each do |act|
-    = act.name
-    = act.date
-    = act.time
-    = link_to "Edit", "/acts/#{act.id}/edit"
-    = button_to "Destroy", "/acts/#{act.id}", :method => :delete, data: { confirm: 'Are you sure?' }
+    %tr
+      %td= act.name
+      %td= act.date
+      %td= act.time
+      %td
+        = link_to "Edit", "/acts/#{act.id}/edit"
+        = link_to "Destroy", "/acts/#{act.id}", :method => :delete, data: { confirm: 'Are you sure?' }
     %br
 
 = link_to "New", new_act_path
