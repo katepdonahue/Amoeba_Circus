@@ -1,12 +1,19 @@
 %h1 Amoebas
 
-%p
+%table
+  %tr
+    %th Name
+    %th Generation
+    %th Talent
+    %th Actions
   - @amoebas.each do |amoeba|
-    = amoeba.name
-    = amoeba.generation
-    = amoeba.talent_id # eventually make this the actual talent
-    = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
-    = link_to "Destroy", "/amoebas/#{amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?'}
+    %tr
+      %td= amoeba.name
+      %td= amoeba.generation
+      %td= amoeba.talent_id # eventually make this the actual talent
+      %td
+        = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
+        = link_to "Destroy", "/amoebas/#{amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?'}
     %br
 
 = link_to "New", new_amoeba_path
