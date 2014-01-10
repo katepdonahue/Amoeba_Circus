@@ -1,0 +1,11 @@
+%h1
+  = talent.name
+
+= talent.date
+= talent.time
+%br
+= link_to "Edit", edit_talent_path
+= link_to "Destroy", "/talents/#{talent.id}/destroy"
+%br
+
+= link_to "Back", talent_path

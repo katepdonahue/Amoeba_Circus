@@ -1,0 +1,11 @@
+%h1
+  = amoeba.name
+
+= amoeba.date
+= amoeba.time
+%br
+= link_to "Edit", edit_amoeba_path
+= link_to "Destroy", "/amoebas/#{amoeba.id}/destroy"
+%br
+
+= link_to "Back", amoeba_path
