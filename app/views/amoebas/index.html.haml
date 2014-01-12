@@ -1,20 +1,21 @@
 %h1 Amoebas
 
 %table
-  %tr
-    %th Name
-    %th Generation
-    %th Talent
-    %th Actions
-  - @amoebas.each do |amoeba|
+  %tbody
     %tr
-      %td= amoeba.name
-      %td= amoeba.generation
-      %td= amoeba.talent.name
-      %td
-        = link_to "Show", "/amoebas/#{amoeba.id}"
-        = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
-        = link_to "Destroy", "/amoebas/#{amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?'}
+      %th Name
+      %th Generation
+      %th Talent
+      %th Actions
+    - @amoebas.each do |amoeba|
+      %tr
+        %td= amoeba.name
+        %td= amoeba.generation
+        %td= amoeba.talent.name
+        %td
+          = link_to "Show", "/amoebas/#{amoeba.id}"
+          = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
+          = link_to "Destroy", "/amoebas/#{amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?'}
     %br
 
 = link_to "New", new_amoeba_path
