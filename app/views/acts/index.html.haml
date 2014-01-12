@@ -9,8 +9,8 @@
   - @acts.each do |act|
     %tr
       %td= act.name
-      %td= act.date
-      %td= act.time
+      %td= act.date.strftime("%m/%d/%Y")
+      %td= act.time.strftime("%l:%M%p")
       %td
         = link_to "Show", "/acts/#{act.id}"
         = link_to "Edit", "/acts/#{act.id}/edit"
