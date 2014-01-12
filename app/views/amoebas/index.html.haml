@@ -15,6 +15,7 @@
         %td
           = link_to "Show", "/amoebas/#{amoeba.id}"
           = link_to "Edit", "/amoebas/#{amoeba.id}/edit"
+          = link_to "Split", "/amoebas/#{amoeba.id}/split"
           = link_to "Destroy", "/amoebas/#{amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?'}
     %br
 
