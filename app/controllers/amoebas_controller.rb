@@ -6,7 +6,6 @@ class AmoebasController < ApplicationController
 
   def new
     @amoeba = Amoeba.new
-    @amoeba.generation = 1
   end
 
   def create
