@@ -6,6 +6,11 @@
 %p
   Talent:
   = @amoeba.talent.name
+%p
+  Acts I'm in:
+  - @amoeba.acts.each do |act|
+    %br
+    = link_to "#{act.name}", "/acts/#{act.id}"
 %br
 = link_to "Edit", edit_amoeba_path
 = link_to "Destroy", "/amoebas/#{@amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?' }
