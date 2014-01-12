@@ -13,6 +13,7 @@
     = link_to "#{act.name}", "/acts/#{act.id}"
 %br
 = link_to "Edit", edit_amoeba_path
+= link_to "Split", "/amoebas/#{amoeba.id}/split"
 = link_to "Destroy", "/amoebas/#{@amoeba.id}", :method => :delete, data: { confirm: 'Are you sure?' }
 %br
 
