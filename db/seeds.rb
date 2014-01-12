@@ -6,17 +6,26 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Act.create([{:name=>"Fireball", :date=>"12/30/2014", :time=>"6:00pm"},
-            {:name=>"Baby's Slumber", :date=>"12/30/2014", :time=>"6:30pm"},
-            {:name=>"Loopy Lala", :date=>"12/30/2014", :time=>"7:00pm"}])
-Amoeba.create([{:name=>"Bob", :generation=>"1", :talent_id=>"1"},
-               {:name=>"Cora", :generation=>"1", :talent_id=>"2"},
-               {:name=>"Lofi", :generation=>"1", :talent_id=>"3"},
-               {:name=>"Sandy", :generation=>"1", :talent_id=>"4"}, 
-               {:name=>"Meep", :generation=>"1", :talent_id=>"5"}, 
-               {:name=>"Kate", :generation=>"1", :talent_id=>"5"}])
+Act.create([{:name=>"Fireball", :date=>Date.new(2014,6,4), :time=>Time.new(2008,6,21, 13,30,0)},
+            {:name=>"Baby's Slumber", :date=>Date.new(2014,6,4), :time=>Time.new(2008,6,21, 14,30,0)},
+            {:name=>"Loopy Lala", :date=>Date.new(2014,6,4), :time=>Time.new(2008,6,21, 15,30,0)}])
+Amoeba.create([{:name=>"Bob", :talent_id=>"1"},
+               {:name=>"Cora", :talent_id=>"2"},
+               {:name=>"Lofi", :talent_id=>"3"},
+               {:name=>"Sandy", :talent_id=>"4"}, 
+               {:name=>"Meep", :talent_id=>"5"}, 
+               {:name=>"Kate", :talent_id=>"5"}])
 Talent.create([{:name=>"acrobat"}, 
                {:name=>"contortionist"}, 
                {:name=>"clown"}, 
                {:name=>"juggler"}, 
                {:name=>"freak"}])
+ActAmoeba.create([{:amoeba_id=>1, :act_id=>1},
+                  {:amoeba_id=>2, :act_id=>1},
+                  {:amoeba_id=>6, :act_id=>1},
+                  {:amoeba_id=>2, :act_id=>2},
+                  {:amoeba_id=>4, :act_id=>2},
+                  {:amoeba_id=>5, :act_id=>3},
+                  {:amoeba_id=>3, :act_id=>3},
+                  {:amoeba_id=>4, :act_id=>3},
+                  {:amoeba_id=>5, :act_id=>3}])
