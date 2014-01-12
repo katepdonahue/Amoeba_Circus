@@ -6,12 +6,12 @@ class Amoeba < ActiveRecord::Base
 
   def jr1
     origin = self.name
-    "#{origin[0].next}#{origin[1..-2]}s"
+    "#{origin[0].next}#{origin[1..-2]}f"
   end
 
   def jr2
     origin = self.name
-    "#{origin[0].next.next}#{origin[1..-2]}f"
+    "#{origin[0].next.next}#{origin[1..-2]}s"
   end
 
   def split
