@@ -1,8 +1,18 @@
 %h1
   = @act.name
 
-= @act.date #strftime(%m/%d/%Y)
-= @act.time
+%p= @act.date.strftime("Date: %m/%d/%Y")
+%p= @act.time.strftime("Time: %l:%M%p")
+%table
+  %h4 Amoebas in this Act:
+  %tr
+    %th Name
+    %th Talent
+  - @act.amoebas.each do |amoeba|
+    %tr
+      %td= link_to "#{amoeba.name}", "/amoebas/#{amoeba.id}"
+      %td= "#{amoeba.talent.name}"
+
 %br
 = link_to "Edit", edit_act_path
 = link_to "Destroy", "/acts/#{@act.id}/destroy"

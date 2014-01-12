@@ -1,20 +1,21 @@
 %h1 Acts
 
 %table
-  %tr
-    %th Name
-    %th Date
-    %th Time
-    %th Actions
-  - @acts.each do |act|
+  %tbody
     %tr
-      %td= act.name
-      %td= act.date.strftime("%m/%d/%Y")
-      %td= act.time.strftime("%l:%M%p")
-      %td
-        = link_to "Show", "/acts/#{act.id}"
-        = link_to "Edit", "/acts/#{act.id}/edit"
-        = link_to "Destroy", "/acts/#{act.id}", :method => :delete, data: { confirm: 'Are you sure?' }
+      %th Name
+      %th Date
+      %th Time
+      %th Actions
+    - @acts.each do |act|
+      %tr
+        %td= act.name
+        %td= act.date.strftime("%m/%d/%Y")
+        %td= act.time.strftime("%l:%M%p")
+        %td
+          = link_to "Show", "/acts/#{act.id}"
+          = link_to "Edit", "/acts/#{act.id}/edit"
+          = link_to "Destroy", "/acts/#{act.id}", :method => :delete, data: { confirm: 'Are you sure?' }
     %br
 
 = link_to "New", new_act_path
