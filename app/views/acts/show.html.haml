@@ -15,7 +15,7 @@
 
 %br
 = link_to "Edit", edit_act_path
-= link_to "Destroy", "/acts/#{@act.id}/destroy"
+= link_to "Destroy", "/acts/#{@act.id}", :method => :delete, data: { confirm: 'Are you sure?' }
 %br
 
 = link_to "Back", acts_path
