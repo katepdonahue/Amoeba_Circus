@@ -10,6 +10,7 @@ class Amoeba < ActiveRecord::Base
       child = Amoeba.create(:name=>self.name, :generation=>(self.generation+1), :talent_id=>self.talent_id)
       children << child
     end
+    self.destroy
     children
   end
 
