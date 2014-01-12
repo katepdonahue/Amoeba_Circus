@@ -6,10 +6,11 @@ class Amoeba < ActiveRecord::Base
 
   def split
     children = []
-    child1 = Amoeba.new
-    child1.name = self.name
-    child1.generation = self.generation + 1
-    child1.talent = self.talent
-    child1.save
+    2.times do
+      child = Amoeba.create(:name=>self.name, :generation=>(self.generation+1), :talent=>self.talent)
+      children << child
+    end
+    children
   end
+
 end
