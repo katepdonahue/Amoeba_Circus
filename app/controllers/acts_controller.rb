@@ -29,6 +29,7 @@ class ActsController < ApplicationController
     params[:act][:amoebas].each do |amoeba_id|
       @act.amoebas << Amoeba.find(amoeba_id)
     end
+    @act.save
     redirect_to @act
   end
 
