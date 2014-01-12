@@ -1,5 +1,6 @@
 AmoebaCircus::Application.routes.draw do
   resources :amoebas
+  get '/amoebas/:id/split' => 'amoebas#split'
 
   get '/acts' => 'acts#index'
   post '/acts' => 'acts#create'
