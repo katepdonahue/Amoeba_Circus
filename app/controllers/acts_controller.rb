@@ -24,8 +24,9 @@ class ActsController < ApplicationController
   def update
     @act = Act.find(params[:id])
     @act.name = params[:act][:name]
-    # @act.date = 
+    @act.date = Date.parse("#{params[:act]["date(3i)"]}/#{params[:act]["date(2i)"]}/#{params[:act]["date(1i)"]}")
     # @act.time =
+    debugger
     params[:act][:amoebas].each do |amoeba_id|
       @act.amoebas << Amoeba.find(amoeba_id)
     end
