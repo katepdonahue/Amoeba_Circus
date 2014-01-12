@@ -31,7 +31,6 @@ class ActsController < ApplicationController
       next if @act.amoebas.include? Amoeba.find(amoeba_id)
       @act.amoebas << Amoeba.find(amoeba_id)
     end
-    debugger
     @act.save
     redirect_to @act
   end

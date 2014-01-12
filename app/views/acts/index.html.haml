@@ -12,6 +12,7 @@
       %td= act.date
       %td= act.time
       %td
+        = link_to "Show", "/acts/#{act.id}"
         = link_to "Edit", "/acts/#{act.id}/edit"
         = link_to "Destroy", "/acts/#{act.id}", :method => :delete, data: { confirm: 'Are you sure?' }
     %br
