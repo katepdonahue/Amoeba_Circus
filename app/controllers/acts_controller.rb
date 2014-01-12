@@ -27,9 +27,11 @@ class ActsController < ApplicationController
     @act.name = p[:name]
     @act.date = Date.parse("#{p["date(3i)"]}/#{p["date(2i)"]}/#{p["date(1i)"]}")
     @act.time = Time.parse("#{p["time(4i)"]}:#{p["time(5i)"]}")
-    p[:amoebas].each do |amoeba_id|
+    p[:amoebas][1..-1].each do |amoeba_id|
+      next if @act.amoebas.include? Amoeba.find(amoeba_id)
       @act.amoebas << Amoeba.find(amoeba_id)
     end
+    debugger
     @act.save
     redirect_to @act
   end
