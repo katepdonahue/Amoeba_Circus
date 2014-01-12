@@ -32,5 +32,10 @@ class AmoebasController < ApplicationController
     redirect_to '/amoebas'
   end
 
+  def split
+    Amoeba.find(params[:id]).split
+    redirect_to '/amoebas'
+  end
+
 
 end
