@@ -6,18 +6,18 @@ class Amoeba < ActiveRecord::Base
 
   def jr1
     origin = self.name
-    "#{origin[0].next}#{origin[1..-1]}ff"
+    "#{origin[0].next}#{origin[1..-1]}"
   end
 
   def jr2
     origin = self.name
-    "#{origin[0].next.next}#{origin[1..-1]}ss"
+    "#{origin[0].next.next}#{origin[1..-1]}"
   end
 
   def split
-    Amoeba.create(:name=>self.jr1, :generation=>(self.generation+1), :talent_id=>self.talent_id)
-    Amoeba.create(:name=>self.jr2, :generation=>(self.generation+1), :talent_id=>self.talent_id)
-    self.destroy
+    Amoeba.create(:name=>jr1, :generation=>(generation+1), :talent_id=>talent_id)
+    Amoeba.create(:name=>jr2, :generation=>(generation+1), :talent_id=>talent_id)
+    destroy
   end
 
 end
