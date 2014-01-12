@@ -9,5 +9,8 @@
     %br
     = f.time_select :time, {:ampm=>true}
     %br
+    = f.label :amoebas
+    %br
+    = f.collection_select :amoebas, Amoeba.all, :id, :name, {}, {:multiple => :true} # gotta get the talent next to the name
   .actions
     = f.submit

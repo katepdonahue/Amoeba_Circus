@@ -23,7 +23,12 @@ class ActsController < ApplicationController
 
   def update
     @act = Act.find(params[:id])
-    @act.update_attributes(params[:act])
+    @act.name = params[:act][:name]
+    # @act.date = 
+    # @act.time =
+    params[:act][:amoebas].each do |amoeba_id|
+      @act.amoebas << Amoeba.find(amoeba_id)
+    end
     redirect_to @act
   end
 

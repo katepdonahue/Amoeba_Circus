@@ -1,7 +1,7 @@
 %h1
   = @act.name
 
-= @act.date.strftime(%m %d %Y)
+= @act.date #strftime(%m/%d/%Y)
 = @act.time
 %br
 = link_to "Edit", edit_act_path
